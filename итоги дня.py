@@ -198,21 +198,21 @@ def vse_itogi():
     all_shagi = str(s1_3)
     all_act1 = str(s1_4)
     all_act2 = str(s1_5)
-    with open('файлы с данными/статистика/статистика дней.txt', 'a') as stata:
+    with open('stats/статистика дней.txt', 'a') as stata:
         stata.write(all_stat_to_send + '\n')
-    with open('файлы с данными/статистика/статистика сна.txt', 'a') as stata_son:
+    with open('stats/статистика сна.txt', 'a') as stata_son:
         stata_son.write(all_son)
-    with open('файлы с данными/статистика/статистика стресса.txt', 'a') as stata_stress:
+    with open('stats/статистика стресса.txt', 'a') as stata_stress:
         stata_stress.write(all_stress)
-    with open('файлы с данными/статистика/статистика шагов.txt', 'a') as stata_shagi:
+    with open('stats/статистика шагов.txt', 'a') as stata_shagi:
         stata_shagi.write(all_shagi)
-    with open('файлы с данными/статистика/статистика актив1.txt', 'a') as stata_act1:
+    with open('stats/статистика актив1.txt', 'a') as stata_act1:
         stata_act1.write(all_act1)
-    with open('файлы с данными/статистика/статистика актив2.txt', 'a') as stata_act2:
+    with open('stats/статистика актив2.txt', 'a') as stata_act2:
         stata_act2.write(all_act2)
 
     all_pkschz = str(s2_1) + '\n' + send3
-    with open('файлы с данными/статистика/статистика пкж.txt', 'a') as stata_pkschz:
+    with open('stats/статистика пкж.txt', 'a') as stata_pkschz:
         stata_pkschz.write(all_pkschz)
 
 
@@ -233,15 +233,15 @@ if vop1 == 1:
         all_shagi = str(s1_3)
         all_act1 = str(s1_4)
         all_act2 = str(s1_5)
-        with open('файлы с данными/статистика/статистика сна.txt', 'a') as stata_son:
+        with open('stats/статистика сна.txt', 'a') as stata_son:
             stata_son.write(all_son + ',' + ' ')
-        with open('файлы с данными/статистика/статистика стресса.txt', 'a') as stata_stress:
+        with open('stats/статистика стресса.txt', 'a') as stata_stress:
             stata_stress.write(all_stress + ',' + ' ')
-        with open('файлы с данными/статистика/статистика шагов.txt', 'a') as stata_shagi:
+        with open('stats/статистика шагов.txt', 'a') as stata_shagi:
             stata_shagi.write(all_shagi + ',' + ' ')
-        with open('файлы с данными/статистика/статистика актив1.txt', 'a') as stata_act1:
+        with open('stats/статистика актив1.txt', 'a') as stata_act1:
             stata_act1.write(all_act1 + ',' + ' ')
-        with open('файлы с данными/статистика/статистика актив2.txt', 'a') as stata_act2:
+        with open('stats/статистика актив2.txt', 'a') as stata_act2:
             stata_act2.write(all_act2 + ',' + ' ')
     else:
         print('Введено не будет!')
@@ -256,16 +256,16 @@ elif vop1 == 2:
         dnev.write(all_to_send)
         dnev.close()
         ozen_disz = str(input('Оцени свою дисциплину за сегодня>>'))
-        with open('файлы с данными/файлы: оценка/оценка - дисциплина.txt', 'a') as ozenka_1:
+        with open('personal-assessments/оценка - дисциплина.txt', 'a') as ozenka_1:
             ozenka_1.write(ozen_disz + ',' + ' ')
         ozen_samoraz = str(input('Оцени свое саморазвитие за сегодня>>'))
-        with open('файлы с данными/файлы: оценка/оценка - саморазвитие.txt', 'a') as ozenka_2:
+        with open('personal-assessments/оценка - саморазвитие.txt', 'a') as ozenka_2:
             ozenka_2.write(ozen_samoraz + ',' + ' ')
         ozen_product = str(input('Оцени свою продуктивность за сегодня>>'))
-        with open('файлы с данными/файлы: оценка/оценка - продуктивность.txt', 'a') as ozenka_3:
+        with open('personal-assessments/оценка - продуктивность.txt', 'a') as ozenka_3:
             ozenka_3.write(ozen_product + ',' + ' ')
         ozen_spok = str(input('Оцени свое спокойствие за сегодня>>'))
-        with open('файлы с данными/файлы: оценка/оценка - спокойствие.txt', 'a') as ozenka_4:
+        with open('personal-assessments/оценка - спокойствие.txt', 'a') as ozenka_4:
             ozenka_4.write(ozen_spok + ',' + ' ')
     else:
         print('Введено не будет!')
@@ -283,7 +283,7 @@ elif vop1 == 3:
         s2_1 = str(input('Введи сегодняшнюю дату >>'))
         send3 = 'Получил баллов:' + str(send_3_1) + '. Прогресс: ' + str(send_3_2) + '/' + str(200)
         all_pkschz = send3
-        with open('файлы с данными/статистика/статистика пкж.txt', 'a') as stata_pkschz:
+        with open('stats/статистика пкж.txt', 'a') as stata_pkschz:
             stata_pkschz.write(str(send_3_1) + '\n')
     else:
         print('Введено не будет!')
